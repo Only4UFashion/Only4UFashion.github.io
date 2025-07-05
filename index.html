@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Only4U Fashion Inc</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      color: #111827;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.5rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+    header .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+    }
+    header nav {
+      display: none;
+      gap: 1.5rem;
+    }
+    header nav a {
+      color: #111827;
+      text-decoration: none;
+    }
+    header nav a:hover {
+      color: #2563eb;
+    }
+    header .menu-button {
+      display: block;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+    @media (min-width: 768px) {
+      header nav {
+        display: flex;
+      }
+      header .menu-button {
+        display: none;
+      }
+    }
+    .hero {
+      position: relative;
+      height: 80vh;
+      background-image: url('images/hero.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .hero-content {
+      background-color: rgba(255, 255, 255, 0.4);
+      padding: 2rem;
+      border-radius: 0.375rem;
+      color: #000000;
+    }
+    .hero h1 {
+      font-size: 2.25rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.125rem;
+      margin-bottom: 1.5rem;
+    }
+    .hero a {
+      padding: 0.75rem 1.5rem;
+      background-color: #000000;
+      color: #ffffff;
+      border-radius: 0.375rem;
+      font-weight: 500;
+      text-decoration: none;
+    }
+    .hero a:hover {
+      background-color: #9ca3af;
+    }
+    @media (min-width: 768px) {
+      .hero h1 {
+        font-size: 3.75rem;
+      }
+    }
+    .about {
+      padding: 5rem 1.5rem;
+      max-width: 80rem;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .about h2 {
+      font-size: 1.875rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    .about p {
+      color: #4b5563;
+      max-width: 32rem;
+      margin: 0 auto;
+    }
+    .products {
+      padding: 4rem 1.5rem;
+      background-color: #f9fafb;
+    }
+    .products h2 {
+      font-size: 1.875rem;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+    .products-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      max-width: 96rem;
+      margin: 0 auto;
+    }
+    .product-card {
+      background-color: #ffffff;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      border-radius: 0.375rem;
+      overflow: hidden;
+    }
+    .product-card img {
+      width: 100%;
+      height: 32rem;
+      object-fit: cover;
+    }
+    @media (min-width: 640px) {
+      .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (min-width: 768px) {
+      .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    @media (min-width: 1024px) {
+      .products-grid {
+        grid-template-columns: repeat(5, 1fr);
+      }
+    }
+    .location {
+      padding: 5rem 1.5rem;
+      text-align: center;
+      background-color: #ffffff;
+    }
+    .location h2 {
+      font-size: 1.875rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    .location p {
+      color: #4b5563;
+      margin-bottom: 0.5rem;
+    }
+    .location a {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background-color: #000000;
+      color: #ffffff;
+      border-radius: 0.375rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: background-color 0.2s;
+    }
+    .location a:hover {
+      background-color: #9ca3af;
+    }
+    .contact {
+      padding: 5rem 1.5rem;
+      background-color: #f9fafb;
+      text-align: center;
+    }
+    .contact h2 {
+      font-size: 1.875rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    .contact p {
+      color: #4b5563;
+      margin-bottom: 1.5rem;
+    }
+    .contact .info {
+      font-size: 1.125rem;
+      font-weight: 500;
+      margin: 0.5rem 0;
+    }
+    footer {
+      background-color: #111827;
+      color: #ffffff;
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <main style="min-height: 100vh;">
+    <!-- Header -->
+    <header>
+      <div class="logo">Only4U Fashion Inc</div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="menu-button">☰</button>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Only4U Fashion Inc</h1>
+        <p>Discover quality and comfort with our exclusive collections.</p>
+        <a href="#products">Browse Collection</a>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <h2>About Us</h2>
+      <p>
+        Only4U Fashion is a wholesale manufacturer located in downtown Los Angeles that specializes in young contemporary clothing for women. We also do business as Redleaf Fashion.
+      </p>
+    </section>
+
+    <!-- Product Preview Section -->
+    <section id="products" class="products">
+      <h2>Featured Products</h2>
+      <div class="products-grid">
+        <div class="product-card">
+          <img src="images/p1.JPG" alt="Product 1">
+        </div>
+        <div class="product-card">
+          <img src="images/p2.JPG" alt="Product 2">
+        </div>
+        <div class="product-card">
+          <img src="images/p3.JPG" alt="Product 3">
+        </div>
+        <div class="product-card">
+          <img src="images/p4.JPG" alt="Product 4">
+        </div>
+        <div class="product-card">
+          <img src="images/p5.JPG" alt="Product 5">
+        </div>
+      </div>
+    </section>
+
+    <!-- Store Location Section -->
+    <section id="location" class="location">
+      <h2>Visit Our Store</h2>
+      <p>770 E 12th St #2, Los Angeles, CA 90021</p>
+      <p>Open Monday – Friday, 9:00 AM – 5:30 PM</p>
+      <a href="https://www.google.com/maps/dir//Red+Leaf,+770+E+12th+St+%232,+Los+Angeles,+CA+90021/@34.0324187,-118.2538549,1028m/data=!3m1!1e3!4m9!4m8!1m0!1m5!1m1!1s0x80c2c62cde36a5e3:0x772b5310dcadc495!2m2!1d-118.2512638!2d34.0325589!3e0?entry=ttu&g_ep=EgoyMDI1MDYzMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">Get Directions</a>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <h2>Contact Us</h2>
+      <p>Contact us for any questions and opt in for weekly new styles through Whatsapp!</p>
+      <p class="info">WhatsApp: 224-508-2080</p>
+      <p class="info">Phone Number: 224-508-2080</p>
+      <p class="info">Email: redleaf411@gmail.com</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      © 2025 Only4U Fashion Inc. All rights reserved.
+    </footer>
+  </main>
+</body>
+</html>
